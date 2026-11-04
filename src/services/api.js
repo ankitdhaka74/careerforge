@@ -1,5 +1,5 @@
 
-const API_URL = 'https://careerforge-backend-silk.vercel.app/api';
+const API_URL = import.meta.env.VITE_API_URL || 'http://localhost:5000/api';
 
 // Common request for registration and login
 async function request(endpoint, data) {
