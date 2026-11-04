@@ -1,0 +1,215 @@
+
+.eligibility-section {
+  margin: 28px 0;
+  padding: 26px;
+  background: #ffffff;
+  border: 1px solid #e8eaf3;
+  border-radius: 18px;
+  box-shadow: 0 8px 28px rgba(28, 35, 70, 0.04);
+}
+
+.eligibility-heading {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  margin-bottom: 24px;
+}
+
+.eligibility-icon {
+  width: 48px;
+  height: 48px;
+  flex-shrink: 0;
+  display: grid;
+  place-items: center;
+  border-radius: 14px;
+  background: #f0edff;
+  color: #6d55ef;
+}
+
+.eligibility-heading h2 {
+  margin: 0 0 6px;
+  color: #17203a;
+  font-size: 21px;
+}
+
+.eligibility-heading p {
+  margin: 0;
+  color: #7a839e;
+  font-size: 13px;
+  line-height: 1.6;
+}
+
+.eligibility-form {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 19px;
+}
+
+.eligibility-field {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  min-width: 0;
+}
+
+.eligibility-field label {
+  color: #303954;
+  font-size: 13px;
+  font-weight: 600;
+}
+
+.eligibility-field input,
+.eligibility-field select {
+  width: 100%;
+  min-width: 0;
+  box-sizing: border-box;
+  padding: 12px 13px;
+  border: 1px solid #e0e4f0;
+  border-radius: 10px;
+  background: #ffffff;
+  color: #202944;
+  font: inherit;
+  font-size: 14px;
+  outline: none;
+  transition: border-color 0.2s, box-shadow 0.2s;
+}
+
+.eligibility-field input:focus,
+.eligibility-field select:focus {
+  border-color: #7157ef;
+  box-shadow: 0 0 0 3px rgba(113, 87, 239, 0.12);
+}
+
+.eligibility-field small {
+  color: #7a839e;
+  font-size: 12px;
+  line-height: 1.6;
+}
+
+.full-width {
+  grid-column: 1 / -1;
+}
+
+.eligibility-submit {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 9px;
+  padding: 13px 18px;
+  border: none;
+  border-radius: 10px;
+  background: #6d55ef;
+  color: #ffffff;
+  font-size: 14px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 0.2s, transform 0.2s;
+}
+
+.eligibility-submit:hover:not(:disabled) {
+  background: #5941d7;
+  transform: translateY(-1px);
+}
+
+.eligibility-submit:disabled {
+  opacity: 0.65;
+  cursor: wait;
+}
+
+.eligibility-error {
+  margin: 0;
+  padding: 12px;
+  border-radius: 9px;
+  background: #fff0f0;
+  color: #c83232;
+  font-size: 13px;
+}
+
+.eligibility-message {
+  color: #707b96;
+  font-size: 14px;
+  line-height: 1.6;
+}
+
+.eligibility-result {
+  margin-top: 22px;
+  padding: 18px;
+  border: 1px solid #e4e7f0;
+  border-radius: 12px;
+  color: #343e58;
+  font-size: 14px;
+  line-height: 1.7;
+}
+
+.eligibility-result.eligible {
+  background: #f0fbf5;
+  border-color: #ccebd9;
+}
+
+.eligibility-result.not-eligible {
+  background: #fff7f1;
+  border-color: #f3dcc8;
+}
+
+.eligibility-result-title {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 12px;
+}
+
+.eligibility-result.eligible .eligibility-result-title {
+  color: #16784a;
+}
+
+.eligibility-result.not-eligible .eligibility-result-title {
+  color: #a64d24;
+}
+
+.eligibility-result-title h3 {
+  margin: 0;
+  font-size: 17px;
+}
+
+.eligibility-result-title p {
+  margin: 3px 0 0;
+  color: #707b96;
+  font-size: 12px;
+}
+
+.eligibility-result > p {
+  margin-bottom: 0;
+}
+
+.eligibility-result ul {
+  margin-bottom: 0;
+  padding-left: 22px;
+}
+
+.eligibility-spinner {
+  animation: eligibility-spin 1s linear infinite;
+}
+
+@keyframes eligibility-spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@media (max-width: 600px) {
+  .eligibility-section {
+    padding: 18px;
+  }
+
+  .eligibility-form {
+    grid-template-columns: 1fr;
+  }
+
+  .eligibility-form .full-width {
+    grid-column: auto;
+  }
+
+  .eligibility-heading h2 {
+    font-size: 19px;
+  }
+}
