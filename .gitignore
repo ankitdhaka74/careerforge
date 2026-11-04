@@ -38,4 +38,5 @@ build/
 coverage/
 
 # OS files
-Thumbs.db
+Thumbs.db.env
+.env
