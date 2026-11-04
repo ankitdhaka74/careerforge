@@ -1,5 +1,5 @@
 
-const API_URL = 'http://localhost:5000/api';
+const API_URL = 'https://careerforge-backend-silk.vercel.app/api';
 
 // Common request for registration and login
 async function request(endpoint, data) {
