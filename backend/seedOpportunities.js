@@ -43,7 +43,8 @@ const opportunities = [
 async function seedOpportunities() {
   try {
     await mongoose.connect(
-      "mongodb://127.0.0.1:27017/careerforge"
+      process.env.MONGO_URI || "mongodb://127.0.0.1:27017/careerforge"
+
     );
 
     for (const opportunity of opportunities) {

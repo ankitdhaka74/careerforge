@@ -11,7 +11,7 @@ const savedJobsRoutes = require('./routes/savedJobs');
 const app = express();
 
 const allowedOrigins = [
-  'https://career-forge-sepia.vercel.app',
+  'https://careerforge-mteu.vercel.app/',
   'http://localhost:5173', // local Vite dev
 ];
 
